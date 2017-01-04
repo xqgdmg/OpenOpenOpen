@@ -1,0 +1,26 @@
+<component name="libraryTable">
+  <library name="social_sdk_library_project-">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/social_sdk_library_project/jars/libs/SocialSDK_tencentWB_2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/social_sdk_library_project/jars/libs/umeng_social_sdk.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/social_sdk_library_project/jars/classes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/social_sdk_library_project/jars/libs/SocialSDK_tumblr.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/social_sdk_library_project/jars/libs/SocialSDK_tencentWB_1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/social_sdk_library_project/jars/libs/SocialSDK_WeiXin_2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/social_sdk_library_project/jars/libs/SocialSDK_WeiXin_1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/social_sdk_library_project/jars/libs/SocialSDK_QQZone_1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/social_sdk_library_project/jars/libs/SocialSDK_QQZone_3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/social_sdk_library_project/jars/libs/SocialSDK_tencentWB_3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/social_sdk_library_project/jars/libs/SocialSDK_Sina.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/social_sdk_library_project/jars/libs/bolts-android-1.1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/social_sdk_library_project/jars/libs/SocialSDK_scrshot.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/social_sdk_library_project/jars/libs/SocialSDK_flickr.jar!/" />
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/social_sdk_library_project/res" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/social_sdk_library_project/jars/libs/httpmime-4.1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/social_sdk_library_project/jars/libs/SocialSDK_actionbarview.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/social_sdk_library_project/jars/libs/SocialSDK_QQZone_2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
