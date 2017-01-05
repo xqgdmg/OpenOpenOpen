@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <EditText
+        android:id="@+id/tv_show"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:hint="等待数据" />
+
+    <Button
+        android:id="@+id/bt_getData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="获取数据Get" />
+
+    <Button
+        android:id="@+id/bt_postData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="上传数据Post" />
+
+    <Button
+        android:id="@+id/bt_postMultiData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="图文上传(分块上传)" />
+
+    <Button
+        android:id="@+id/bt_download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="图片下载" />
+
+</LinearLayout>
