@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:padding="@dimen/cardview_margin"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/iv_zhihu_daily"
+        android:layout_height="80dp"
+        android:layout_weight="1"
+        android:layout_width="0dp"/>
+
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:layout_width="0dp">
+
+        <TextView
+            android:id="@+id/tv_zhihu_daily"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/cardview_title"/>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"/>
+    </RelativeLayout>
+
+    <Button
+        android:background="@drawable/ic_more_vert_black_24px"
+        android:id="@+id/btn_zhihu"
+        android:layout_height="25dp"
+        android:layout_width="25dp"/>
+</LinearLayout>
