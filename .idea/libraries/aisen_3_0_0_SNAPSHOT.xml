@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="aisen-3.0.0-SNAPSHOT">
+    <ANNOTATIONS>
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/org.aisen.android/aisen/3.0.0-SNAPSHOT/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/org.aisen.android/aisen/3.0.0-SNAPSHOT/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/org.aisen.android/aisen/3.0.0-SNAPSHOT/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
