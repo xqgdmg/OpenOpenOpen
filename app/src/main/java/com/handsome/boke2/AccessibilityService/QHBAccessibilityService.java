@@ -2,13 +2,20 @@ package com.handsome.boke2.AccessibilityService;
 
 import android.accessibilityservice.AccessibilityService;
 import android.annotation.TargetApi;
+import android.app.Instrumentation;
+import android.app.KeyguardManager;
 import android.app.Notification;
 import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Build;
+import android.os.PowerManager;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityNodeInfo;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,6 +52,13 @@ public class QHBAccessibilityService extends AccessibilityService {
                     for (CharSequence text : texts) {
                         String content = text.toString();
                         if (content.contains("[微信红包]")) {
+                             // 点亮屏幕，解锁
+                            try {
+                                wakeUpAndUnlock();
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+
                             //模拟打开通知栏消息，即打开微信
                             if (event.getParcelableData() != null &&
                                     event.getParcelableData() instanceof Notification) {
@@ -69,17 +83,53 @@ public class QHBAccessibilityService extends AccessibilityService {
                     Log.e("demo","点击红包");
                     getLastPacket();
                 } else if (className.equals("com.tencent.mm.plugin.luckymoney.ui.LuckyMoneyReceiveUI")) {
-                    //开红包
-                    Log.e("demo","开红包");
-                    inputClick("com.tencent.mm:id/bg7");
+                    //开红包 控件ID
+                    Log.e("demo","开红包"); //com.tencent.mm:id/c4j
+                    inputClick("com.tencent.mm:id/c4j");
                 } else if (className.equals("com.tencent.mm.plugin.luckymoney.ui.LuckyMoneyDetailUI")) {
-                    //退出红包
-                    Log.e("demo","退出红包");
-                    inputClick("com.tencent.mm:id/gd");
+                    //退出红包 ID
+                    Log.e("demo","退出红包"); //com.tencent.mm:id/hy
+                    inputClick("com.tencent.mm:id/hx");
+
+                     //返回桌面
+                    gotoLancer();
                 }
                 break;
         }
     }
+
+    /**
+     * 唤醒手机屏幕并解锁
+     */
+    private void wakeUpAndUnlock() {
+        // 获取电源管理器对象
+        PowerManager pm = (PowerManager)getSystemService(Context.POWER_SERVICE);
+        boolean screenOn = pm.isScreenOn();
+        if (!screenOn) {
+            // 获取PowerManager.WakeLock对象,后面的参数|表示同时传入两个值,最后的是LogCat里用的Tag
+            PowerManager.WakeLock wl = pm.newWakeLock(
+                    PowerManager.ACQUIRE_CAUSES_WAKEUP |
+                            PowerManager.SCREEN_BRIGHT_WAKE_LOCK, "bright");
+            wl.acquire(10000); // 点亮屏幕
+            wl.release(); // 释放
+        }
+        // 屏幕解锁
+        KeyguardManager keyguardManager = (KeyguardManager) getSystemService(KEYGUARD_SERVICE);
+        KeyguardManager.KeyguardLock keyguardLock = keyguardManager.newKeyguardLock("unLock");
+        // 屏幕锁定
+        keyguardLock.reenableKeyguard();
+        keyguardLock.disableKeyguard(); // 解锁
+    }
+
+    private void gotoLancer() {
+        Intent intent = new Intent();
+        // 为Intent设置Action、Category属性
+        intent.setAction(Intent.ACTION_MAIN);// "android.intent.action.MAIN"
+        intent.addCategory(Intent.CATEGORY_HOME); //"android.intent.category.HOME"
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+    }
+
 
     /**
      * 通过ID获取控件，并进行模拟点击
